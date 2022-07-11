@@ -1,23 +1,25 @@
 The Script is adding a port 443 as an incoming rule. If want to make it an outgoing rule then use "egress" as an type.
 
-from_port - (Required) Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+Following are the parameters used :
 
-protocol - (Required) Protocol. If not icmp, icmpv6, tcp, udp, or all use the protocol number
+1. from_port - (Required) Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 
-security_group_id - (Required) Security group to apply this rule to.
+2. protocol - (Required) Protocol. If not icmp, icmpv6, tcp, udp, or all use the protocol number
 
-to_port - (Required) End port (or ICMP code if protocol is "icmp").
+3. security_group_id - (Required) Security group to apply this rule to.
 
-type - (Required) Type of rule being created. Valid options are ingress (inbound) or egress (outbound).
+4. to_port - (Required) End port (or ICMP code if protocol is "icmp").
 
-cidr_blocks - (Optional) List of CIDR blocks. Cannot be specified with source_security_group_id or self.
+5. type - (Required) Type of rule being created. Valid options are ingress (inbound) or egress (outbound).
 
-description - (Optional) Description of the rule.
+6. cidr_blocks - (Optional) List of CIDR blocks. Cannot be specified with source_security_group_id or self.
 
-ipv6_cidr_blocks - (Optional) List of IPv6 CIDR blocks. Cannot be specified with source_security_group_id or self.
+7. description - (Optional) Description of the rule.
 
-prefix_list_ids - (Optional) List of Prefix List IDs.
+8. ipv6_cidr_blocks - (Optional) List of IPv6 CIDR blocks. Cannot be specified with source_security_group_id or self.
 
-self - (Optional) Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or source_security_group_id.
+9. prefix_list_ids - (Optional) List of Prefix List IDs.
 
-source_security_group_id - (Optional) Security group id to allow access to/from, depending on the type. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or self.
+10. self - (Optional) Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or source_security_group_id.
+
+11. source_security_group_id - (Optional) Security group id to allow access to/from, depending on the type. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or self.
